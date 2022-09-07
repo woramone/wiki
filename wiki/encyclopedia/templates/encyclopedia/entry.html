@@ -1,0 +1,17 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+
+{{ title|safe }}
+
+{%endblock %}
+
+{% block body %}
+
+{{ entry|safe }}
+<a href="/edit/{{ title }}"">
+    <button type=" submit" method="post">Edit</button>
+</a>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+Edit Page
+{%endblock %}
+
+{% block body %}
+<h1>Edit Entry</h1>
+
+<form action="" method="post">
+    {% csrf_token %}
+
+    {{ form.title|safe }}
+    {{ form.content|safe }}
+    <input type="submit" value="Save">
+</form>
+{% endblock %}

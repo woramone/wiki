@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+
+Encyclopedia
+
+{%endblock %}
+
+{% block body %}
+
+
+<a href="wiki/{{ entry }}">{{ entry|safe }}</a>
+
+
+{% endblock %}

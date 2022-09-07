@@ -1,0 +1,23 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+Search Results
+{%endblock %}
+
+{% block body %}
+
+
+<ul>
+    {% for entry in entries %}
+    <li><a href="/wiki/{{ entry }}">{{ entry|safe }}</a></li>
+    {% empty %}
+
+    <h3>No results found.</h3>
+
+
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

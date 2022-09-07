@@ -1,0 +1,22 @@
+{% extends "encyclopedia/layout.html" %}
+{% load md2 %}
+
+{% block title %}
+
+Create new encyclopedia entry
+
+{%endblock %}
+
+{% block body %}
+<h1>Create New Entry</h1>
+
+<form method="post" action="">
+    {% csrf_token %}
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="content" id="" cols="35" rows="8" placeholder="Content" required></textarea>
+
+    <input type="submit" value="Create">
+
+</form>
+
+{% endblock %}
